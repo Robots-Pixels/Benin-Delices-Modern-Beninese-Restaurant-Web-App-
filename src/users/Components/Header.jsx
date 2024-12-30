@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import Navlink from './Navlink.jsx'
 
-export default function Header() {
+export default function Header() { 
 
   return (
     <header className='bg-third text-white sticky top-0'>
