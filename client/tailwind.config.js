@@ -15,7 +15,9 @@ export default {
     },
 
     fontFamily: {
-      'island': ['Island Moments', 'sans-serif'],}
+      'island': ['Island Moments', 'sans-serif'],
+    },
+
   },
   plugins: [],
 }

@@ -6,14 +6,28 @@ import Contact from "./users/Pages/Contact"
 import Menu from "./users/Pages/Menu"
 import Reserver from "./users/Pages/Reserver"
 import Sidebar from "./users/Components/Sidebar"
+import { useState } from "react"
+import Footer from "./users/Components/Footer"
 
 function App() {
+    const [active, setActive] = useState(false);
+  
   return (
     <BrowserRouter>
-      <div id="main">
-        <Header />
 
-          <div className='h-[1000px]'></div>
+    <div id="header" className="sticky top-0 z-50">
+        <Header />
+    </div>
+
+      <div
+        id="main"
+        className={`transition-transform duration-400 ease-in-out overflow-x-hidden ${
+          active ? "bg-black bg-opacity-70" : "bg-transparent"
+        }`}
+        style={{
+          transition: "transform 0.4s ease-in-out, background-color 0.6s ease-in-out",
+        }}
+        >
 
           <Routes>
             <Route path="/" element={<Accueil />} />
@@ -22,9 +36,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/reserver" element={<Reserver />} />
           </Routes>
+
+      <Footer/>
+
       </div>
 
-        <Sidebar />
+        <Sidebar active={active} setActive={setActive}/>
     </BrowserRouter>
   )
 }
