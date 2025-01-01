@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <header className='bg-third text-white'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto px-2 py-4 md:px-4'>
+      <div className='flex justify-between items-center max-w-6xl mx-auto px-2 py-4 sm:px-4 md:px-4'>
 
         <Link to={'/'}>
           <h1 className='text-5xl sm:text-6xl md:text-7xl font-island'>BeninDelice</h1>

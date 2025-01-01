@@ -4,8 +4,7 @@ import underline from "../../assets/images/underline.svg"
 import ignamePilée from '../../assets/images/ignamePilée.webp';
 import amiwo from '../../assets/images/amiwo.jpg';
 import wassa from '../../assets/images/wassa.jpeg';
-
-
+import {faSquare} from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -49,25 +48,23 @@ export default function Menu() {
       
       <section id='filtres' className='w-full flex justify-center items-center'>
 
-        <ul className='flex text-center text-[17px] font-medium flex-col text-third lowercase items-center gap-y-2 z-10
-        sm:flex-row sm:gap-x-10 sm:capitalize
+        <ul className='flex text-center text-[1.1rem] font-medium flex-col text-third lowercase items-center gap-y-2 z-10
+        sm:flex-row sm:gap-x-10 sm:capitalize sm:text-xl md:text-3xl
         '>
 
-          <Link className='
-           sm:text-2xl 
-           md:text-3xl' to={'/menu'}>
+          <Link to={'/menu'} >
             entrées
           </Link>
 
-          <Link className='sm:text-2xl md:text-3xl underline uppercase' to={'/menu'}>
+          <Link className='underline uppercase' to={'/menu'}>
             plats principaux
           </Link>
 
-          <Link className='sm:text-2xl md:text-3xl' to={'/menu'}>
+          <Link className='' to={'/menu'}>
             désserts
           </Link>
 
-          <Link className='sm:text-2xl md:text-3xl' to={'/menu'}>
+          <Link className='' to={'/menu'}>
             boissons
           </Link>
         </ul>
@@ -82,7 +79,7 @@ export default function Menu() {
 
           <div id='search'
             className='flex items-center bg-third text-white px-5 py-3 rounded-md mt-5 cursor-pointer mx-auto
-            sm:mb-[4.2rem] sm: max-w-[25rem]'>
+            sm:mb-[4.2rem] sm:max-w-[25rem]'>
 
             <input className='bg-third outline-none text-md placeholder:font-semibold placeholder:text-[17px] placeholder:text-[#ffffffb3]' type="text" placeholder="Rechercher un plat"/>
 
@@ -201,15 +198,13 @@ export default function Menu() {
 
       </section>
 
-
-      <div  className='relative mx-auto flex flex-col items-center mb-[-3rem] sm:mb-[-3rem] md:mb-[-5rem]'>
+      <div className='relative mx-auto flex flex-col items-center mb-[-3rem] sm:mb-[-3rem] md:mb-[-5rem]'>
         <img className='
         w-48 h-36 mt-[-52px] bg-opacity-90 
         sm:w-60 sm:h-40 sm:mt-[-60px]
         md:w-[30rem] md:h-60 md:mt-[-100px]' src={underline}/>
 
       </div>
-
 
       <div className='max-w-xl mx-auto px-2 md:px-4 mb-10'>
         <h1 className='text-[1.25rem] text-center italic mt-3 
@@ -219,7 +214,15 @@ export default function Menu() {
         </h1>
       </div>
 
-      <ReservationCard/>
+      <ReservationCard />
+
+      <div className="relative w-full">
+                <hr />
+            <FontAwesomeIcon
+                className="absolute top-1/2 left-1/2 text-[#FFF] text-sm rotate-[45deg] transform -translate-x-1/2 -translate-y-1/2"
+                icon={faSquare}
+            />
+      </div>
 
     </main>
   )
